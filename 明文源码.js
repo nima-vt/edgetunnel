@@ -28,20 +28,20 @@ let IP13 = 'usa.visa.com'
 
 // http_port
 let PT1 = '80'
-let PT2 = '8080'
-let PT3 = '8880'
-let PT4 = '2052'
-let PT5 = '2082'
-let PT6 = '2086'
-let PT7 = '2095'
+let PT2 = '80'
+let PT3 = '80'
+let PT4 = '80'
+let PT5 = '80'
+let PT6 = '80'
+let PT7 = '80'
 
 // https_port
 let PT8 = '443'
-let PT9 = '8443'
-let PT10 = '2053'
-let PT11 = '2083'
-let PT12 = '2087'
-let PT13 = '2096'
+let PT9 = '443'
+let PT10 = '443'
+let PT11 = '443'
+let PT12 = '443'
+let PT13 = '443'
 
 let proxyIP = proxyIPs[Math.floor(Math.random() * proxyIPs.length)];
 let proxyPort = proxyIP.includes(':') ? proxyIP.split(':')[1] : '443';

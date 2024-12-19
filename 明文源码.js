@@ -24,7 +24,7 @@ let IP9 = 'server.iranserver.com'
 let IP10 = 'dl3.mizbanfa.net'
 let IP11 = 'www2.parspack.com'
 let IP12 = 'cdn.rtl-theme.com'
-let IP13 = 'usa.visa.com'
+let IP13 = 'www.visa.com'
 
 // http_port
 let PT1 = '80'
@@ -840,7 +840,7 @@ async function handleUDPOutBound(webSocket, vlessResponseHeader, log) {
 function getVLESSConfig(userID, hostName) {
   const wvlessws = `vless\u003A//${userID}\u0040${CDNIP}:8880?encryption=none&security=none&type=ws&host=${hostName}&path=%2F%3Fed%3D2560#${hostName}`;
   const pvlesswstls = `vless\u003A//${userID}\u0040${CDNIP}:8443?encryption=none&security=tls&type=ws&host=${hostName}&sni=${hostName}&fp=random&path=%2F%3Fed%3D2560#${hostName}`;
-  const note = `甬哥博客地址：https://ygkkk.blogspot.com\n甬哥YouTube频道：https://www.youtube.com/@ygkkk\n甬哥TG电报群组：https://t.me/ygkkktg\n甬哥TG电报频道：https://t.me/ygkkktgpd\n\nProxyIP全局运行中：${proxyIP}`;
+  const note = `Yongge Blog Address：https://ygkkk.blogspot.com\n甬哥YouTube频道：https://www.youtube.com/@ygkkk\n甬哥TG电报群组：https://t.me/ygkkktg\n甬哥TG电报频道：https://t.me/ygkkktgpd\n\nProxyIP全局运行中：${proxyIP}`;
   const ty = `https://${hostName}/${userID}/ty`
   const cl = `https://${hostName}/${userID}/cl`
   const sb = `https://${hostName}/${userID}/sb`
@@ -872,7 +872,7 @@ function copyToClipboard(text) {
   input.select();
   document.execCommand('Copy');
   document.body.removeChild(input);
-  alert('已复制到剪贴板');
+  alert('Copied to Clipboard');
 }
 </script>
 `;
@@ -885,7 +885,7 @@ ${displayHtml}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Cloudflare-workers/pages-vless代理脚本 V24.10.18</h1>
+            <h1>Cloudflare-workers/pages-vless proxy script V24.10.18</h1>
 	    <hr>
             <p>${noteshow}</p>
             <hr>
@@ -893,43 +893,43 @@ ${displayHtml}
 	    <hr>
             <br>
             <br>
-            <h3>1：CF-workers-vless+ws节点</h3>
+            <h3>1：CF-workers-vless+ws node</h3>
 			<table class="table">
 				<thead>
 					<tr>
-						<th>节点特色：</th>
-						<th>单节点链接如下：</th>
+						<th>Node Features：</th>
+						<th>The single node link is as follows：</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="limited-width">关闭了TLS加密，无视域名阻断</td>
+						<td class="limited-width">Disable TLS encryption and ignore domain name blocking</td>
 						<td class="limited-width">${wvlessws}</td>
-						<td><button class="btn btn-primary" onclick="copyToClipboard('${wvlessws}')">点击复制链接</button></td>
+						<td><button class="btn btn-primary" onclick="copyToClipboard('${wvlessws}')">Click to copy the link</button></td>
 					</tr>
 				</tbody>
 			</table>
-            <h5>客户端参数如下：</h5>
+            <h5>The client parameters are as follows：</h5>
             <ul>
-                <li>客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP 或者 反代IP</li>
-                <li>端口(port)：7个http端口可任意选择(80、8080、8880、2052、2082、2086、2095)，或反代IP对应端口</li>
-                <li>用户ID(uuid)：${userID}</li>
-                <li>传输协议(network)：ws 或者 websocket</li>
-                <li>伪装域名(host)：${hostName}</li>
-                <li>路径(path)：/?ed=2560</li>
-		<li>传输安全(TLS)：关闭</li>
+                <li>Client Address(address)：Custom domain name or preferred domain name or preferred IP or reverse IP</li>
+                <li>Port(port)：You can choose any of the 7 http ports (80,8080,8880,2052,2082,2086,2095) or use the corresponding port of the reverse IP</li>
+                <li>User ID(uuid)：${userID}</li>
+                <li>Transport Protocol(network)：ws or websocket</li>
+                <li>Disguised Domain Name(host)：${hostName}</li>
+                <li>path(path)：/?ed=2560</li>
+		<li>Transmission security(TLS)：closure</li>
             </ul>
             <hr>
 			<hr>
 			<hr>
             <br>
             <br>
-            <h3>2：CF-workers-vless+ws+tls节点</h3>
+            <h3>2：CF-workers-vless+ws+tls node</h3>
 			<table class="table">
 				<thead>
 					<tr>
-						<th>节点特色：</th>
-						<th>单节点链接如下：</th>
+						<th>Node Features：</th>
+						<th>The single node link is as follows：</th>
 					</tr>
 				</thead>
 				<tbody>

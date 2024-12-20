@@ -1325,7 +1325,7 @@ proxies:
       Host: ${hostName}
 
 proxy-groups:
-- name: 负载均衡
+- name: Load Balancing
   type: load-balance
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -1344,7 +1344,7 @@ proxy-groups:
     - CF_V12_${IP12}_${PT12}
     - CF_V13_${IP13}_${PT13}
 
-- name: 自动选择
+- name: Automatic selection
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -1364,11 +1364,11 @@ proxy-groups:
     - CF_V12_${IP12}_${PT12}
     - CF_V13_${IP13}_${PT13}
 
-- name: 🌍选择代理
+- name: 🌍Choose an agent
   type: select
   proxies:
-    - 负载均衡
-    - 自动选择
+    - Load Balancing
+    - Automatic Selection
     - DIRECT
     - CF_V1_${IP1}_${PT1}
     - CF_V2_${IP2}_${PT2}
@@ -1387,7 +1387,7 @@ proxy-groups:
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,🌍选择代理`
+  - MATCH,🌍Choose an agent`
 }
 	
 function getsbConfig(userID, hostName) {
@@ -2008,7 +2008,7 @@ proxies:
       Host: ${hostName}
 
 proxy-groups:
-- name: 负载均衡
+- name: Load Balancing
   type: load-balance
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -2020,7 +2020,7 @@ proxy-groups:
     - CF_V12_${IP12}_${PT12}
     - CF_V13_${IP13}_${PT13}
 
-- name: 自动选择
+- name: Automatic selection
   type: url-test
   url: http://www.gstatic.com/generate_204
   interval: 300
@@ -2033,11 +2033,11 @@ proxy-groups:
     - CF_V12_${IP12}_${PT12}
     - CF_V13_${IP13}_${PT13}
 
-- name: 🌍选择代理
+- name: 🌍Choose an agent
   type: select
   proxies:
-    - 负载均衡
-    - 自动选择
+    - Load Balancing
+    - Automatic selection
     - DIRECT
     - CF_V8_${IP8}_${PT8}
     - CF_V9_${IP9}_${PT9}
@@ -2049,7 +2049,7 @@ proxy-groups:
 rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,🌍选择代理`
+  - MATCH,🌍Choose an agent`
 }
 		
 function getpsbConfig(userID, hostName) {

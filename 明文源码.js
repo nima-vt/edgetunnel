@@ -916,8 +916,8 @@ ${displayHtml}
                 <li>User ID(uuid)：${userID}</li>
                 <li>Transport Protocol(network)：ws or websocket</li>
                 <li>Disguised Domain Name(host)：${hostName}</li>
-                <li>path(path)：/?ed=2560</li>
-		<li>Transmission security(TLS)：closure</li>
+                <li>Path(path)：/?ed=2560</li>
+		<li>Transmission Security(TLS)：Off</li>
             </ul>
             <hr>
 			<hr>
@@ -934,42 +934,42 @@ ${displayHtml}
 				</thead>
 				<tbody>
 					<tr>
-						<td class="limited-width">启用了TLS加密，<br>如果客户端支持分片(Fragment)功能，建议开启，防止域名阻断</td>
+						<td class="limited-width">TLS encryption enabled，<br>If the client supports the Fragment function, it is recommended to enable it to prevent domain name blocking.</td>
 						<td class="limited-width">${pvlesswstls}</td>	
-						<td><button class="btn btn-primary" onclick="copyToClipboard('${pvlesswstls}')">点击复制链接</button></td>
+						<td><button class="btn btn-primary" onclick="copyToClipboard('${pvlesswstls}')">Click to copy the link</button></td>
 					</tr>
 				</tbody>
 			</table>
-            <h5>客户端参数如下：</h5>
+            <h5>The client parameters are as follows：</h5>
             <ul>
-                <li>客户端地址(address)：自定义的域名 或者 优选域名 或者 优选IP 或者 反代IP</li>
-                <li>端口(port)：6个https端口可任意选择(443、8443、2053、2083、2087、2096)，或反代IP对应端口</li>
-                <li>用户ID(uuid)：${userID}</li>
-                <li>传输协议(network)：ws 或者 websocket</li>
-                <li>伪装域名(host)：${hostName}</li>
-                <li>路径(path)：/?ed=2560</li>
-                <li>传输安全(TLS)：开启</li>
-                <li>跳过证书验证(allowlnsecure)：false</li>
+                <li>Client address: custom domain name or preferred domain name or preferred IP or reverse IP</li>
+                <li>Port: You can choose any of the 6 https ports (443,8443,2053,2083,2087,2096), or the corresponding port of the reverse IP</li>
+                <li>User ID(uuid)：${userID}</li>
+                <li>Transport Protocol (network): ws or websocket</li>
+                <li>Disguised Domain Name(host)：${hostName}</li>
+                <li>Path(path)：/?ed=2560</li>
+                <li>Transport Security(TLS): On</li>
+                <li>Skip certificate verification (allow lnsecure)：false</li>
 			</ul>
 			<hr>
 			<hr>
 			<hr>
 			<br>	
 			<br>
-			<h3>3：聚合通用、Clash-meta、Sing-box订阅链接如下：</h3>
+			<h3>3：The subscription links for Aggregate General, Clash-meta, and Sing-box are as follows：</h3>
 			<hr>
-			<p>注意：<br>1、默认每个订阅链接包含TLS+非TLS共13个端口节点<br>2、当前workers域名作为订阅链接，需通过代理进行订阅更新<br>3、如使用的客户端不支持分片功能，则TLS节点不可用</p>
+			<p>Attention：<br>1. By default, each subscription link contains 13 port nodes including TLS+non-TLS<br>2. The current workers domain name is used as a subscription link and needs to be subscribed and updated through a proxy<br>3. If the client used App does not support the sharding function, the TLS node will be unavailable</p>
 			<hr>
 			<table class="table">
 					<thead>
 						<tr>
-							<th>聚合通用订阅链接：</th>
+							<th>Aggregate Universal Subscription Links：</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td class="limited-width">${ty}</td>	
-							<td><button class="btn btn-primary" onclick="copyToClipboard('${ty}')">点击复制链接</button></td>
+							<td><button class="btn btn-primary" onclick="copyToClipboard('${ty}')">Click to copy the link</button></td>
 						</tr>
 					</tbody>
 				</table>	
@@ -977,13 +977,13 @@ ${displayHtml}
 				<table class="table">
 						<thead>
 							<tr>
-								<th>Clash-meta订阅链接：</th>
+								<th>Clash-meta Subscription Link：</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
 								<td class="limited-width">${cl}</td>	
-								<td><button class="btn btn-primary" onclick="copyToClipboard('${cl}')">点击复制链接</button></td>
+								<td><button class="btn btn-primary" onclick="copyToClipboard('${cl}')">Click to copy the link</button></td>
 							</tr>
 						</tbody>
 					</table>
@@ -991,13 +991,13 @@ ${displayHtml}
 					<table class="table">
 					<thead>
 						<tr>
-							<th>Sing-box订阅链接：</th>
+							<th>Sing-box Subscription Link：</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td class="limited-width">${sb}</td>	
-							<td><button class="btn btn-primary" onclick="copyToClipboard('${sb}')">点击复制链接</button></td>
+							<td><button class="btn btn-primary" onclick="copyToClipboard('${sb}')">Click to copy the link</button></td>
 						</tr>
 					</tbody>
 				</table>
@@ -1017,7 +1017,7 @@ ${displayHtml}
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Cloudflare-workers/pages-vless代理脚本 V24.10.18</h1>
+            <h1>Cloudflare-workers/pages-vless proxy script V24.10.18</h1>
 			<hr>
             <p>${noteshow}</p>
             <hr>
@@ -1025,12 +1025,12 @@ ${displayHtml}
 			<hr>
             <br>
             <br>
-            <h3>1：CF-pages/workers/自定义域-vless+ws+tls节点</h3>
+            <h3>1：CF-pages/workers/custom domain-vless+ws+tls node</h3>
 			<table class="table">
 				<thead>
 					<tr>
-						<th>节点特色：</th>
-						<th>单节点链接如下：</th>
+						<th>Node Features：</th>
+						<th>The single node link is as follows：</th>
 					</tr>
 				</thead>
 				<tbody>
